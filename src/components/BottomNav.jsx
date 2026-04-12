@@ -1,9 +1,9 @@
 // ─── Assets (from Figma node 11056:1132) ──────────────────────────
 const ASSETS = {
-  chat:       '/image/bottomnav_chat.png',
-  profile:    '/image/bottomnav_profile.png',
-  launch:     '/image/bottomnav_launch.png',
-  trending:   '/image/bottomnav_trending.png',
+  chat:       '/image/bottomnav_chat.svg',
+  profile:    '/image/bottomnav_profile.svg',
+  launch:     '/image/bottomnav_launch.svg',
+  trending:   '/image/bottomnav_trending.svg',
   bgTexture:  '/image/bottomnav_bgtexture.png',
 }
 

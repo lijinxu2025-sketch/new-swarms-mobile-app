@@ -3,9 +3,9 @@ import SearchBar from '../components/SearchBar'
 
 // ─── Assets ────────────────────────────────────────────────────────
 const ASSETS = {
-  arrowBack:  '/image/searchpage_arrowback.png',
-  checkIcon:  '/image/searchpage_checkicon.png',
-  checkBg:    '/image/searchpage_checkbg.png',
+  arrowBack:  '/image/searchpage_arrowback.svg',
+  checkIcon:  '/image/searchpage_checkicon.svg',
+  checkBg:    '/image/searchpage_checkbg.svg',
   // Recent avatars
   recent1: '/image/searchpage_recent1.png',
   recent2: '/image/searchpage_recent2.png',

@@ -6,12 +6,12 @@ import SearchBar from '../components/SearchBar'
 // ─── Assets ────────────────────────────────────────────────────────
 // Note: Figma MCP URLs expire in 7 days — download to /public/image/ as .webp
 const ASSETS = {
-  iconStar:    '/image/homepage_iconstar.png',
+  iconStar:    '/image/homepage_iconstar.svg',
   // Category tab icons (from node 11029:2375)
-  tabForYou:   '/image/homepage_tabforyou.png',
-  tabPrompts:  '/image/homepage_tabprompts.png',
-  tabAgents:   '/image/homepage_tabagents.png',
-  tabTools:    '/image/homepage_tabtools.png',
+  tabForYou:   '/image/homepage_tabforyou.svg',
+  tabPrompts:  '/image/homepage_tabprompts.svg',
+  tabAgents:   '/image/homepage_tabagents.svg',
+  tabTools:    '/image/homepage_tabtools.svg',
   // Agent card images
   card1:  '/image/homepage_card1.png',
   card2:  '/image/homepage_card2.png',

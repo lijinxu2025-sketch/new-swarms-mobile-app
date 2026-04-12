@@ -3,7 +3,7 @@ import StatusBar from '../components/StatusBar'
 
 // ─── Assets ────────────────────────────────────────────────────────
 const ASSETS = {
-  arrowBack: '/image/filterpage_arrowback.png',
+  arrowBack: '/image/filterpage_arrowback.svg',
 }
 
 // ─── Constants ─────────────────────────────────────────────────────

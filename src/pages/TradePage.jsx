@@ -3,13 +3,13 @@ import StatusBar from '../components/StatusBar'
 
 // ─── Assets ────────────────────────────────────────────────────────
 const ASSETS = {
-  close: '/image/tradepage_close.png',
-  divider: '/image/tradepage_divider.png',
-  buyBg: '/image/tradepage_buybg.png',
+  close: '/image/tradepage_close.svg',
+  divider: '/image/tradepage_divider.svg',
+  buyBg: '/image/tradepage_buybg.svg',
   solIcon: '/image/tradepage_solicon.png',
   tokenIcon: '/image/tradepage_tokenicon.png',
-  walletIcon: '/image/tradepage_walleticon.png',
-  sheetBg: '/image/tradepage_sheetbg.png',
+  walletIcon: '/image/tradepage_walleticon.svg',
+  sheetBg: '/image/tradepage_sheetbg.svg',
 }
 
 const STATS = [

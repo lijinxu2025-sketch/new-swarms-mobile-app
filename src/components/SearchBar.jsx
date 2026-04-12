@@ -1,10 +1,10 @@
 import { useState, useRef, useEffect } from 'react'
 
 // ─── Assets ────────────────────────────────────────────────────────
-const ICON_SEARCH_DEFAULT = '/image/searchbar_icon_search_default.png'
-const ICON_SEARCH_ACTIVE  = '/image/searchbar_icon_search_active.png'
-const ICON_CLEAR          = '/image/searchbar_icon_clear.png'
-const ICON_FILTER         = '/image/searchbar_icon_filter.png'
+const ICON_SEARCH_DEFAULT = '/image/searchbar_icon_search_default.svg'
+const ICON_SEARCH_ACTIVE  = '/image/searchbar_icon_search_active.svg'
+const ICON_CLEAR          = '/image/searchbar_icon_clear.svg'
+const ICON_FILTER         = '/image/searchbar_icon_filter.svg'
 
 /**
  * SearchBar component

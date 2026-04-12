@@ -3,17 +3,17 @@ import StatusBar from '../components/StatusBar'
 
 // ─── Assets ────────────────────────────────────────────────────────
 const ASSETS = {
-  arrowBack: '/image/creatorpage_arrowback.png',
-  share: '/image/creatorpage_share.png',
-  favorite: '/image/creatorpage_favorite.png',
+  arrowBack: '/image/creatorpage_arrowback.svg',
+  share: '/image/creatorpage_share.svg',
+  favorite: '/image/creatorpage_favorite.svg',
   avatar: '/image/creatorpage_avatar.png',
-  verified: '/image/creatorpage_verified.png',
-  github: '/image/creatorpage_github.png',
-  x: '/image/creatorpage_x.png',
-  copy: '/image/creatorpage_copy.png',
-  searchIcon: '/image/creatorpage_searchicon.png',
-  iconStar: '/image/creatorpage_iconstar.png',
-  creatorAvatar: '/image/creatorpage_creatoravatar.png',
+  verified: '/image/creatorpage_verified.svg',
+  github: '/image/creatorpage_github.svg',
+  x: '/image/creatorpage_x.svg',
+  copy: '/image/creatorpage_copy.svg',
+  searchIcon: '/image/creatorpage_searchicon.svg',
+  iconStar: '/image/creatorpage_iconstar.svg',
+  creatorAvatar: '/image/creatorpage_creatoravatar.svg',
   // Card images
   card1: '/image/creatorpage_card1.png',
   card2: '/image/creatorpage_card2.png',

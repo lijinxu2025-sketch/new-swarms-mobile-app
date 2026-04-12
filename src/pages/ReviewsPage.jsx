@@ -3,17 +3,17 @@ import StatusBar from '../components/StatusBar'
 
 // ─── Assets ────────────────────────────────────────────────────────
 const ASSETS = {
-  arrowBack: '/image/reviewspage_arrowback.png',
-  starFilled: '/image/reviewspage_starfilled.png',
-  starEmpty: '/image/reviewspage_starempty.png',
-  thumbUp: '/image/reviewspage_thumbup.png',
-  thumbDown: '/image/reviewspage_thumbdown.png',
-  writeIcon: '/image/reviewspage_writeicon.png',
+  arrowBack: '/image/reviewspage_arrowback.svg',
+  starFilled: '/image/reviewspage_starfilled.svg',
+  starEmpty: '/image/reviewspage_starempty.svg',
+  thumbUp: '/image/reviewspage_thumbup.svg',
+  thumbDown: '/image/reviewspage_thumbdown.svg',
+  writeIcon: '/image/reviewspage_writeicon.svg',
   avatar1: '/image/reviewspage_avatar1.png',
   avatar2: '/image/reviewspage_avatar2.png',
   avatar3: '/image/reviewspage_avatar3.png',
-  starLargeFilled: '/image/reviewspage_starlargefilled.png',
-  starLargeEmpty: '/image/reviewspage_starlargeempty.png',
+  starLargeFilled: '/image/reviewspage_starlargefilled.svg',
+  starLargeEmpty: '/image/reviewspage_starlargeempty.svg',
 }
 
 const RATING_DATA = [
