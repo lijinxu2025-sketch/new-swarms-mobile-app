@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;0,800&family=Orbitron:wght@800&display=swap');
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  margin: 0;
+  background: #111;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* 移动端：全屏自适应 */
+#root {
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  position: relative;
+  background: #000;
+}
+
+/* 桌面端：固定 375px 居中，还原设计稿比例 */
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100svh;
+  }
+
+  #root {
+    width: 375px;
+    height: 812px;
+    max-height: 100svh;
+  }
+}
+
+.scroll-hide::-webkit-scrollbar {
+  display: none;
+}
+.scroll-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
