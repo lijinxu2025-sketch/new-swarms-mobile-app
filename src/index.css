@@ -44,3 +44,14 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* LaunchPage 输入框：placeholder 灰色，输入文字白色 */
+.launch-input::placeholder,
+.launch-textarea::placeholder {
+  color: #777;
+  opacity: 1;
+}
+.launch-input,
+.launch-textarea {
+  color: white;
+}

@@ -6,6 +6,7 @@ import AgentDetailPage from './pages/AgentDetailPage'
 import ReviewsPage from './pages/ReviewsPage'
 import TradePage from './pages/TradePage'
 import CreatorPage from './pages/CreatorPage'
+import LaunchPage from './pages/LaunchPage'
 
 export default function App() {
   const [page, setPage] = useState('home')
@@ -16,6 +17,7 @@ export default function App() {
   if (page === 'reviews') return <ReviewsPage onBack={() => setPage('agent-detail')} />
   if (page === 'trade') return <TradePage onClose={() => setPage('agent-detail')} />
   if (page === 'creator') return <CreatorPage onBack={() => setPage('agent-detail')} />
+  if (page === 'launch') return <LaunchPage onBack={() => setPage('home')} />
 
   return (
     <HomePage
@@ -24,7 +26,7 @@ export default function App() {
       onAgentClick={() => setPage('agent-detail')}
       onChat={() => {}}
       onProfile={() => {}}
-      onLaunch={() => {}}
+      onLaunch={() => setPage('launch')}
       onTrending={() => {}}
       onSettings={() => {}}
     />
