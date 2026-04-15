@@ -1,13 +1,37 @@
-// ─── Assets (from Figma node 11056:1132) ──────────────────────────
+// ─── Assets ────────────────────────────────────────────────────────
 const ASSETS = {
-  chat:       '/image/bottomnav_chat.svg',
-  profile:    '/image/bottomnav_profile.svg',
-  launch:     '/image/bottomnav_launch.svg',
-  trending:   '/image/bottomnav_trending.svg',
-  bgTexture:  '/image/bottomnav_bgtexture.png',
+  // Chat: outline = inactive, active = filled
+  chatOutline:    '/image/bottomnav_chat.svg',
+  chatActive:     '/image/bottomnav_chat_active.svg',
+  // Home: filled = active, outline = inactive
+  homeActive:     '/image/bottomnav_profile.svg',
+  homeOutline:    '/image/bottomnav_profile_outline.svg',
+  // Center launch button
+  launch:         '/image/bottomnav_launch.svg',
+  // Settings gear: outline / active
+  settingsOutline: '/image/bottomnav_trending.svg',
+  settingsActive:  '/image/bottomnav_settings_active.svg',
+  bgTexture:      '/image/bottomnav_bgtexture.png',
 }
 
+// Active tab values: 'chat' | 'home' | 'trending' | 'settings'
+// The launch button (center) has no active state.
+
 export default function BottomNav({ activeTab = 'home', onChat, onProfile, onLaunch, onTrending, onSettings }) {
+  const isActive = (tab) => activeTab === tab
+
+  // Button style: active tab gets a slightly lighter background to match Figma
+  const btnStyle = (tab) => ({
+    background: '#1f1f1f',
+    borderRadius: '10px',
+    padding: '15px',
+    border: 'none',
+    cursor: 'pointer',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  })
+
   return (
     <div className="shrink-0 relative" style={{ height: '89px' }}>
       {/* Gradient fade above nav */}
@@ -33,7 +57,7 @@ export default function BottomNav({ activeTab = 'home', onChat, onProfile, onLau
           border: '1px solid rgba(64,64,64,0.4)',
         }}
       >
-        {/* Glassmorphic bg: gradient overlay */}
+        {/* Glassmorphic bg */}
         <div
           className="absolute inset-0"
           style={{
@@ -41,7 +65,6 @@ export default function BottomNav({ activeTab = 'home', onChat, onProfile, onLau
             borderRadius: '10px',
           }}
         />
-        {/* Texture image at 10% opacity */}
         <img
           src={ASSETS.bgTexture}
           alt=""
@@ -52,60 +75,69 @@ export default function BottomNav({ activeTab = 'home', onChat, onProfile, onLau
         {/* Buttons row */}
         <div className="relative z-10 h-full flex items-center justify-between" style={{ padding: '6px' }}>
 
-          {/* Chat */}
-          <button
-            onClick={onChat}
-            className="flex items-center justify-center border-0 cursor-pointer"
-            style={{ background: '#1f1f1f', borderRadius: '10px', padding: '15px' }}
-          >
-            <img src={ASSETS.chat} alt="Chat" style={{ width: '22px', height: '22px' }} />
+          {/* 1 — Chat */}
+          <button onClick={onChat} style={btnStyle('chat')}>
+            <img
+              src={isActive('chat') ? ASSETS.chatActive : ASSETS.chatOutline}
+              alt="Chat"
+              style={{ width: '22px', height: '22px' }}
+            />
           </button>
 
-          {/* Profile */}
-          <button
-            onClick={onProfile}
-            className="flex items-center justify-center border-0 cursor-pointer"
-            style={{ background: '#1f1f1f', borderRadius: '10px', padding: '15px' }}
-          >
-            <img src={ASSETS.profile} alt="Profile" style={{ width: '24px', height: '24px' }} />
+          {/* 2 — Home */}
+          <button onClick={onProfile} style={btnStyle('home')}>
+            <img
+              src={isActive('home') ? ASSETS.homeActive : ASSETS.homeOutline}
+              alt="Home"
+              style={{ width: '24px', height: '24px' }}
+            />
           </button>
 
-          {/* Launch — red center button */}
+          {/* 3 — Launch (red center, no active state) */}
           <button
             onClick={onLaunch}
-            className="flex items-center justify-center border-0 cursor-pointer"
             style={{
               background: '#ed1717',
               borderRadius: '10px',
               width: '52px',
               height: '52px',
               padding: '0',
+              border: 'none',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
             }}
           >
             <img src={ASSETS.launch} alt="Launch" style={{ width: '20px', height: '20px' }} />
           </button>
 
-          {/* Trending / Grid */}
-          <button
-            onClick={onTrending}
-            className="flex items-center justify-center border-0 cursor-pointer"
-            style={{ background: '#1f1f1f', borderRadius: '10px', padding: '15px' }}
-          >
+          {/* 4 — Trending / Grid */}
+          <button onClick={onTrending} style={btnStyle('trending')}>
             <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-              <rect x="0.75" y="0.75" width="6.32" height="6.32" rx="2" stroke="#aaaaab" strokeWidth="1.5" />
-              <rect x="0.75" y="10.75" width="6.32" height="6.32" rx="2" stroke="#aaaaab" strokeWidth="1.5" />
-              <rect x="10.75" y="10.75" width="6.32" height="6.32" rx="2" stroke="#aaaaab" strokeWidth="1.5" />
-              <rect x="11.07" y="3.8" width="5.38" height="5.38" rx="1" stroke="#aaaaab" strokeWidth="1.5" transform="rotate(-45 11.07 3.8)" />
+              <rect x="0.75"  y="0.75"  width="6.32" height="6.32" rx="2"
+                stroke={isActive('trending') ? 'white' : '#aaaaab'} strokeWidth="1.5"
+                fill={isActive('trending') ? 'white' : 'none'} />
+              <rect x="0.75"  y="10.75" width="6.32" height="6.32" rx="2"
+                stroke={isActive('trending') ? 'white' : '#aaaaab'} strokeWidth="1.5"
+                fill={isActive('trending') ? 'white' : 'none'} />
+              <rect x="10.75" y="10.75" width="6.32" height="6.32" rx="2"
+                stroke={isActive('trending') ? 'white' : '#aaaaab'} strokeWidth="1.5"
+                fill={isActive('trending') ? 'white' : 'none'} />
+              <rect x="11.07" y="3.8" width="5.38" height="5.38" rx="1"
+                stroke={isActive('trending') ? 'white' : '#aaaaab'} strokeWidth="1.5"
+                transform="rotate(-45 11.07 3.8)"
+                fill={isActive('trending') ? 'white' : 'none'} />
             </svg>
           </button>
 
-          {/* Settings */}
-          <button
-            onClick={onSettings}
-            className="flex items-center justify-center border-0 cursor-pointer"
-            style={{ background: '#1f1f1f', borderRadius: '10px', padding: '15px' }}
-          >
-            <img src={ASSETS.trending} alt="Settings" style={{ width: '24px', height: '24px' }} />
+          {/* 5 — Settings */}
+          <button onClick={onSettings} style={btnStyle('settings')}>
+            <img
+              src={isActive('settings') ? ASSETS.settingsActive : ASSETS.settingsOutline}
+              alt="Settings"
+              style={{ width: '24px', height: '24px' }}
+            />
           </button>
 
         </div>
